@@ -8,7 +8,7 @@ export default class Registration extends Component {
         if(userData)
             window.location.href = '/profile'
     }   
-    
+    //new change
     save() {
         var isValid = validateSave()
         if (isValid === true) {
