@@ -1,0 +1,20 @@
+.mainDiv{
+    max-width: 200px;
+    margin: auto;
+}
+.leftBtn{
+    padding: 10px;
+    margin-right: 10px;
+    cursor:pointer;
+}
+.rightBtn{
+    padding: 10px;   
+    cursor:pointer; 
+}
+.mandatory{
+    color:red;
+}
+.formField{
+    height: 30px;
+    width: 250px;
+}

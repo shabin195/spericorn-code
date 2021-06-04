@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { postData } from '../services';
 import { loginValidateSave } from './validations'
+import './style.css'
 export default class Login extends Component {    
     componentDidMount() {
         let userData = localStorage.getItem("userData")
@@ -28,23 +29,23 @@ export default class Login extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="mainDiv">
                 <h1>Login</h1>
                 <div>
                     <div>
                         <p>Email:</p>
-                        <input type="text" tabindex='1' autoComplete="off" name="txtEmail" id="txtEmail" placeholder="Email" autoFocus />
+                        <input type="text" className="formField" tabindex='1' autoComplete="off" name="txtEmail" id="txtEmail" placeholder="Email" autoFocus />
                     </div>
                     <div>
                         <p>Password:</p>
-                        <input type="password" tabindex='2' autoComplete="off" name="txtPassword" id="txtPassword" placeholder="Password" />
+                        <input type="password" className="formField" tabindex='2' autoComplete="off" name="txtPassword" id="txtPassword" placeholder="Password" />
                     </div>
                     <br />
                     <br />
                     <div>
-                        <button onClick={() => this.save()}>Login</button>
+                        <button className="leftBtn" onClick={() => this.save()}>Login</button>
                         <Link to={{ pathname: "/registration" }} >
-                            <button>Go to Registration</button>
+                            <button className="rightBtn">Go to Registration</button>
                         </Link>
                     </div>
                 </div>

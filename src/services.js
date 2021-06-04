@@ -1,9 +1,7 @@
 import axios from "axios";
 
-
 const postUrl = 'https://devgroceryapi.spericorn.com/api/auth/'
 const getUrl = 'https://devgroceryapi.spericorn.com/api/'
-
 
 export function postData(postData,endPoint) {   
     return axios.post(postUrl+endPoint, postData)

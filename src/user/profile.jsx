@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { getData } from '../services';
 export default class Profile extends Component {
     constructor(props) {
@@ -33,22 +32,22 @@ export default class Profile extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="mainDiv">
                 <h1>Profile</h1>
                 <div>
                     <div>
-                        <label>User Name : {this.state.username}</label>
+                        <label><b>User Name :</b> {this.state.username}</label>
                     </div>
                     <div>
-                        <label>Phone No : {this.state.phone}</label>
+                        <label><b>Phone No :</b> {this.state.phone}</label>
                     </div>
                     <div>
-                        <label>Email : {this.state.email}</label>
+                        <label><b>Email :</b> {this.state.email}</label>
                     </div>
                     <br />
                     <br />
                     <div>                        
-                        <button onClick={()=>this.logOut()}>Logout</button>                                               
+                        <button className="leftBtn" onClick={()=>this.logOut()}>Logout</button>                                               
                     </div>
                 </div>
             </div>

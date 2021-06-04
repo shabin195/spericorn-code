@@ -4,6 +4,7 @@ export function validateSave() {
     var email = document.getElementById("txtEmail").value;
     var splitemail = email.split(/\r|\r\n|\n/);
     var emailcount = splitemail.length;
+    var mediumRegex = new RegExp("^(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%^&+=])(?=.{8,})"); 
     if (document.getElementById("txtUserName").value === "") {
         alert("User Name Required.");
         document.getElementById("txtUserName").focus();
@@ -29,7 +30,7 @@ export function validateSave() {
         document.getElementById("txtEmail").focus()
         isValid = false;
     }
-    else if (document.getElementById("txtPassword").value !== "" && !document.getElementById("txtPassword").value.match(/^[a-zA-Z0-9!@#$%^&*]{6,16}$/)) {
+    else if (document.getElementById("txtPassword").value !== "" && !mediumRegex.test(document.getElementById("txtPassword").value)) {
         alert("Password must have at least 8 characters and a special.");
         document.getElementById("txtPassword").focus();
         isValid = false;
